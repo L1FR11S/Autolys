@@ -1,0 +1,272 @@
+
+AUTOLYS
+AI-Driven Investor Intelligence Platform
+
+
+
+Projektplan & Plattformsarkitektur
+En del av Fairvalue-ekosystemet
+Mars 2026
+
+1. Executive Summary
+Autolys är en AI-driven plattform som automatiskt analyserar och sammanfattar IR-kommunikation från noterade bolag — pressmeddelanden, kvartalsrapporter, VD-intervjuer och övrig officiell kommunikation. Plattformen ger retail-investerare snabba, överskådliga insikter utan att behöva läsa igenom hundratals sidor.
+Som en del av Fairvalue-ekosystemet fyller Autolys rollen som den investerarvända mottagarsidan: Fairvalue hjälper bolagen att producera och distribuera IR-material, och Autolys hjälper investerarna att konsumera och förstå det.
+Värdeerbjudande i korthet:
+Dimension
+Beskrivning
+För investeraren
+Spara tid, få AI-sammanfattningar, skapa personligt flöde, jämför bolag
+För bolaget
+Större räckvidd, bättre förståelse hos aktägarna, mätbar IR-effekt
+För Fairvalue
+Ny intäktsström, stärkt ekosystem, upsell-möjligheter till befintliga kunder
+
+
+2. Plattformsstruktur — Navigation & Sidor
+Nedan beskrivs den huvudsakliga sidstrukturen. Plattformen använder en vänstermeny (desktop) / bottenmeny (mobil) med följande primära vyer:
+Ikon
+Flik / Sida
+Beskrivning
+🏠
+Hem / Mitt Flöde
+Personaliserat flöde med senaste updates från bolag du följer. AI-sammanfattningar, alerts och highlights.
+🔍
+Utforska
+Brows alla bevakade bolag. Filtrera på sektor, lista (First North, Mid Cap etc.), nyckeltal. Trending-sektion.
+🏢
+Bolagssida
+Dedikerad sida per bolag med sub-flikar (se sektion 3). Kärnan i plattformen.
+⭐
+Min Bevakningslista
+Snabböversikt över alla följda bolag med status-indikatorer, senaste händelser och alerts.
+📈
+Jämför
+Sida-vid-sida-jämförelse av 2–4 bolag på nyckeltal, sentiment, tillväxt och AI-insikter.
+🔔
+Notiser & Alerts
+Push/email-notiser för nya rapporter, pressmeddelanden, kursrrörelser eller AI-flaggade händelser.
+👤
+Min Profil
+Kontoinställningar, prenumeration, sektorsprèferenser, notis-inställningar.
+
+
+3. Bolagssidan — Det centrala navet
+Varje bolag får en egen dedikerad sida som fungerar som investerarens "kontrollpanel" för det bolaget. Sidan har följande sub-flikar:
+Översikt (Default-vy)
+AI-genererad sammanfattning: "Vad behöver du veta just nu?" — en kort, uppdaterad översikt av bolagets senaste kommunikation.
+Nyckeltal-panel: Omsättning, EBITDA, marginal, tillväxttakt, P/E — extraherade ur senaste rapporten.
+Sentiment-indikator: AI-baserad tonemätare på bolagets kommunikation (positiv/neutral/försiktig).
+Tidslinje: Kronologisk översikt av alla händelser — PM, rapporter, intervjuer.
+"Följ bolag"-knapp: Lägger till bolaget i ditt flöde och bevakningslista.
+Pressmeddelanden
+Automatisk inhämtning: Pressmeddelanden hämtas via RSS/API från Cision, MFN, GlobeNewswire etc.
+AI-sammanfattning: Varje PM får en 3–5 meningars sammanfattning + "Key Takeaways" i punktform.
+Kategorisering: AI kategoriserar automatiskt (ordernyhet, förvärv, personalnyhet, regulatoriskt, etc.).
+Original-länk: Alltid tillgång till originaltexten för fullständig läsning.
+Rapporter
+Rapportanalys: AI läser hela kvartals-/årsrapporten och extraherar nyckeltal, jämför med föregående kvartal.
+"Beat or Miss": Automatisk jämförelse mot konsensus/förväntningar (där data finns).
+Highlight-sektion: VD-ord sammanfattat, viktigaste punkterna, risker och möjligheter.
+Trendgrafer: Visuell omsättnings-, marginal- och tillväxtutveckling över tid.
+Intervjuer & Media
+Transkribering: AI transkriberar VD-intervjuer och videomaterial (Fairvalues intervjuer + övrigt).
+Timestamped highlights: Klickbara tidstämplar för nyckeluttalanden.
+Citatextraktion: De viktigaste citaten från VD/CFO presenteras separat.
+Video-embed: Inbäddade YouTube/Vimeo-spelare direkt på sidan.
+AI-Analys & Chat
+Fråga Autolys: Chatt-interface där användaren kan ställa frågor om bolaget. AI:n har kontext från all insamlad data.
+Exempel-promptar: "Vad sa VD:n om tillväxtstrategin?", "Jämför Q3 vs Q2", "Vilka risker nämns?".
+Källhänvisning: Alla AI-svar länkas till originalkällan (specifik rapport, PM, intervju med tidstämpel).
+
+4. Core Features — Prioritering
+Prio
+Feature
+Beskrivning
+Fas
+P0
+PM-inhämtning & AI-summering
+Auto-hämta pressmeddelanden, generera sammanfattning + takeaways
+MVP
+P0
+Bolagssidor med översikt
+Dedikerad sida per bolag med AI-sammanfattning och tidslinje
+MVP
+P0
+Följ bolag + personligt flöde
+Användare väljer bolag, får ett kurerat flöde
+MVP
+P1
+Rapport-analys (kvartal/år)
+PDF-parsing, nyckeltal-extraktion, trendgrafer
+Fas 2
+P1
+AI-chat per bolag
+Ställ frågor om bolaget baserat på all data
+Fas 2
+P1
+Notiser & alerts
+Push/email vid nya PM, rapporter, kursrrörelser
+Fas 2
+P2
+Video/audio-transkribering
+Whisper-baserad transkribering med tidstämplar
+Fas 3
+P2
+Jämförelseverktyg
+Sida-vid-sida-jämförelse av bolag
+Fas 3
+P2
+Fairvalue-integration
+Deep-link till Kalqyl-analyser, VD-intervjuer, IPO-info
+Fas 3
+P3
+Portföljkoppling
+Användare kopplar depkäönto för automatisk bevakning
+Framtid
+P3
+Community / diskussioner
+Kommentarsfunktion och diskussionstrsad per bolag
+Framtid
+
+
+5. Användarresa — Onboarding till Daglig Användning
+Steg 1: Registrering
+Enkel sign-up via e-post eller BankID. Alternativt Google/Apple SSO. Fråga direkt efter registrering: "Vilka bolag är du intresserad av?" med sökfält och populära förslag.
+Steg 2: Välj bolag att följa
+Presentera Fairvalues kundbolag prominent (Plejd, HomeMaid, EQL Pharma, etc.) samt alla övriga noterade bolag. Kategorisera per sektor och lista. Minimum 3 bolag för att komma igång.
+Steg 3: Ditt flöde byggs
+Systemet hämtar historisk data för valda bolag och genererar AI-sammanfattningar. Användaren ser direkt ett meningsfullt flöde med senaste pressmeddelanden, rapporter och nyheter.
+Steg 4: Daglig användning
+Användaren får notiser vid nya händelser, kan djupdyka i bolagssidor, ställa frågor till AI:n och jämföra bolag. Målet: ersätta manuell genomläsning av PM och rapporter.
+6. Affärsmodell
+Autolys har en dubbelsidig intäktsmodell som stärker Fairvalues befintliga erbjudande:
+B2C: Freemium + Premium
+Nivå
+Innehåll
+Pris
+Free
+Följ upp till 5 bolag, AI-sammanfattningar av PM, grundläggande översikt
+0 kr/mån
+Pro
+Obegränsat antal bolag, rapport-analys, AI-chat, alerts, jämförelseverktyg
+99–199 kr/mån
+Investor+
+Allt i Pro + portföljkoppling, avancerade analyser, API-access
+299–499 kr/mån
+
+B2B: Sponsor-bolag (Fairvalue-upsell)
+Bolag som är Fairvalue-kunder kan betala för "Promoted"-status på Autolys: featured i Utforska-sektionen, rikare bolagssida med länk till Kalqyl-analys och VD-intervju, samt mätbar IR-statistik (visningar, följare, chatfrågor).
+
+7. Föreslagen Tech Stack
+Lager
+Teknologi
+Motivering
+Frontend
+Next.js + Tailwind CSS
+Samma stack som Stacktask/Superclaim. SEO-vänligt med SSR.
+Backend / API
+Next.js API Routes eller Supabase Edge Functions
+Snabb utveckling, serverless-först.
+Databas
+Supabase (PostgreSQL)
+Bekänt verktyg, realtidsstöd, inbyggd auth.
+AI / LLM
+Claude API (Sonnet/Haiku)
+Sammanfattning, analys, chat. Haiku för snabba tasks, Sonnet för djupanalys.
+Transkribering
+OpenAI Whisper API
+Best-in-class för svensk taligenkänning.
+Datainhämtning
+Cision/MFN API + web scraping
+RSS-feeds för PM, PDF-scraping för rapporter.
+Sök / Vektor
+Supabase pgvector
+Vektorsökning för AI-chat-kontextfönster.
+Hosting
+Vercel (frontend) + Hetzner/Supabase (backend)
+Kostnadseffektivt, skalbart.
+Auth
+Supabase Auth + ev. BankID
+Google/Apple SSO + BankID för premium.
+
+8. Data Pipeline — Hur Data Flödar
+Plattformens kärnflöde från rådata till användarinsikt:
+1. Inhämtning: Cron-jobb (var 15:e minut) pollar RSS-feeds från Cision, MFN och bolagswebbplatser. Nya PM och rapporter sparas rå i databasen.
+2. Processing: AI-pipeline triggas: PDF-extraction (för rapporter), text-rensning, tokenisering.
+3. Analys: Claude API genererar sammanfattning, takeaways, nyckeltal-extraktion, sentiment-score och kategorisering.
+4. Lagring: Strukturerad data + vektorembeddings sparas i Supabase. Bolagssidan uppdateras i realtid.
+5. Notifiering: Användare som följer bolaget får push-notis och/eller email med AI-sammanfattning.
+6. Interaktion: Användaren kan chatta med AI:n som har kontext från all processad data för just det bolaget.
+
+9. Synergier med Fairvalue-ekosystemet
+Autolys är inte en fristående produkt — den är designad för att förstärka hela Fairvalue-erbjudandet:
+Fairvalue-tjänst
+Integration i Autolys
+Effekt
+Kalqyl-analyser
+Länk till full analys från bolagssidan. AI refererar till Kalqyl-data.
+Mer trafik till analyser, högre upplevt värde.
+VD-intervjuer
+Inbäddad video + AI-transkribering med highlights.
+Fler tittare, bättre tillgänglighet.
+IPO/Emission
+Dedicated IPO-sektion på bolagssidan vid aktiva erbjudanden.
+Direkt konvertering från intresse till investering.
+Distribution
+Autolys blir en ny distributionskanal — push direkt till investerare.
+Mätbar räckvidd, nya datapunkter.
+
+10. Roadmap & Milstolpar
+Fas 1: MVP (Månad 1–2)
+Landing page + registrering (Supabase Auth)
+20–50 bolag med automatisk PM-inhämtning
+AI-sammanfattning av pressmeddelanden (Claude Haiku)
+Grundläggande bolagssidor med översikt och tidslinje
+Följ-funktion + personaliserat flöde
+Soft launch till Fairvalues befintliga nätverk
+Fas 2: Core Product (Månad 3–4)
+Rapport-analys med nyckeltal-extraktion
+AI-chat per bolag ("Fråga Autolys")
+Notiser & alerts
+Kalqyl-integration (deep-links)
+Utvidgning till 100+ bolag
+Fas 3: Premium Features (Månad 5–6)
+Video-transkribering av VD-intervjuer
+Jämförelseverktyg
+Freemium/Pro-betalmodell
+Community-funktioner
+B2B sponsor-dashboard för bolag/Fairvalue
+
+11. Risker & Mitigation
+Risk
+Konsekvens
+Mitigation
+Sannolikhet
+AI-hallucinationer i analyser
+Felaktig info till investerare
+Källhänvisning på varje svar, disclaimer, mänsklig granskning i tidigt skede
+Medel
+Regulatorisk risk (MiFID II, MAR)
+Plattformen kan bedömas som rådgivning
+Tydlig disclaimer att detta inte är investeringsråd. Juridisk granskning.
+Låg–Medel
+Datakvalitet / inhämtning
+Missade PM, felaktiga rapporter
+Multipla datakkällor, manuell QA-process, användarrapportering
+Medel
+AI-kostnader skenar
+Ohallbar enhetsekonomi
+Haiku för rutintasks, caching av sammanfattningar, stegvis premiummodell
+Låg
+Låg användaradoption
+Svlgt att nå kritisk massa
+Fairvalues befintliga nätverk som startbas, freemium-modell, content marketing
+Medel
+
+12. Rekommenderade Nästa Steg
+1. Validera datainhämtning — testa Cision/MFN RSS-feeds för 10 bolag. Verifiera att PM kommer in i realtid.
+2. Bygg en enkel prototyp — en bolagssida med AI-summering av senaste 5 PM:en. Testa på Fairvalues kundbolag.
+3. Sätt upp Supabase-projektet med schema för companies, press_releases, reports, user_follows.
+4. Designa UI/UX — Figma-mockups för bolagssida, flöde och onboarding. Testa med 3–5 retail-investerare.
+5. Juridisk check — säkerställ att AI-genererade sammanfattningar inte klassas som investeringsrådgivning under MiFID II.
+6. Definiera Fairvalue-integration — vilken data kan delas, API-avtal, gemensam auth-lösning?
