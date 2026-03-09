@@ -2,6 +2,8 @@ import Link from "next/link";
 import { getCompanies } from "@/lib/api/companies";
 import type { Company } from "@/lib/api/companies";
 
+export const dynamic = "force-dynamic";
+
 export default async function ExplorePage() {
     const companies = await getCompanies();
 

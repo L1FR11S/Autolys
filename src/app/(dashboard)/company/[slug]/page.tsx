@@ -305,8 +305,8 @@ export default function CompanyPage() {
                             for (const pr of pressReleases) {
                                 const t = (pr as any).triggers;
                                 if (t && typeof t === "object" && !Array.isArray(t)) {
-                                    if (Array.isArray(t.positiva)) positiva.push(...t.positiva);
-                                    if (Array.isArray(t.negativa)) negativa.push(...t.negativa);
+                                    if (Array.isArray(t.positiva)) positiva.push(...t.positiva.map((item: any) => typeof item === "string" ? item : (item.trigger || item.text || JSON.stringify(item))));
+                                    if (Array.isArray(t.negativa)) negativa.push(...t.negativa.map((item: any) => typeof item === "string" ? item : (item.trigger || item.text || JSON.stringify(item))));
                                 }
                             }
                             if (positiva.length === 0 && negativa.length === 0) {
