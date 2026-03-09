@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getLatestPressReleases } from "@/lib/api/press-releases";
 
+export const dynamic = "force-dynamic";
 export default async function FeedPage() {
     const allItems = await getLatestPressReleases(20);
 
